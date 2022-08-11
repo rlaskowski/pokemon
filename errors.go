@@ -3,8 +3,9 @@ package pokemon
 import "net/http"
 
 var (
-	ErrQueryParameter = newError(http.StatusBadRequest, "bad query parameter")
-	ErrContent        = newError(http.StatusBadRequest, "content wasn't found")
+	ErrParameter   = newError(http.StatusBadRequest, "bad request parameter")
+	ErrContent     = newError(http.StatusBadRequest, "content wasn't found")
+	ErrPokemonName = newError(http.StatusBadRequest, "bad pokemon name list")
 )
 
 type Error struct {
